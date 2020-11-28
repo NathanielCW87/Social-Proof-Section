@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;500;600&display=swap');
+
+body {
+
+    display: flex;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*GRID*/
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "pro stars stars"
+        "colton irene anne";
+    max-width: 1200px;
+    max-height: 100vh;
+    margin: 0 auto;
+    margin-top: 7%;
+    word-spacing: 0.1em;
+    letter-spacing: 0.12em;
+    column-gap: 2em;
+    row-gap: 1.2em;
+}
+/*PRO*/
+#pro {
+    grid-area: pro;
+}
+
+#pro h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 3rem;
+}
+
+#pro p {
+    color: hsl(300, 13%, 48%);
+    margin-top: 20px;
+}
+
+/*STARS*/
+#stars {
+    grid-area: stars;
+    color: hsl(300, 43%, 22%);
+    line-height: 2.5em;
+    margin-left: 6em;
+    font-weight: 600;
+}
+
+
+#stars #first {
+    padding-bottom: 28px;
+    max-width: 375px;
+    text-align: center;
+}
+
+#stars #second {
+    padding-bottom: 28px;
+    max-width: 375px;
+    text-align: center;
+    margin-left: 4em;
+}
+
+#stars #third {
+    padding-bottom: 28px;
+    max-width: 375px;
+    text-align: center;
+    margin-left: 8em;
+}
+
+#stars p {
+    background-color: hsl(300, 24%, 96%);
+}
+
+#stars .review {
+    border-radius: 12px;
+}
+
+#stars .report {
+    border-radius: 12px;
+}
+
+#stars .best {
+    border-radius: 12px;
+}
+
+/*CUSTOMERS*/
+
+            /*COLTON*/
+#colton {
+    grid-area: colton;
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    height: 245px;
+}
+
+#colton img {
+    border-radius: 80px;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#colton .who {
+    color: hsl(300, 24%, 96%);
+    font-weight: 600;
+    justify-self: center;
+    float: right;
+    margin-right: 7.6em;
+    margin-top: 2.3em;
+}
+
+#colton span {
+    color: hsl(303, 10%, 53%);
+    font-weight: 200;
+}
+
+#colton .comment {
+    padding: 15px;
+}
+
+/*IRENE*/
+#irene {
+    grid-area: irene;
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    height: 245px;
+    margin-top: 4em;
+}
+
+#irene img {
+    border-radius: 80px;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#irene .who {
+    color: hsl(300, 24%, 96%);
+    font-weight: 600;
+    justify-self: center;
+    float: right;
+    margin-right: 7.6em;
+    margin-top: 2.3em;
+}
+
+#irene span {
+    color: hsl(303, 10%, 53%);
+    font-weight: 200;
+}
+
+#irene .comment {
+    padding: 15px;
+}
+
+/*ANNE*/
+#anne {
+    grid-area: anne;
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    height: 245px;
+    margin-top: 8em;
+}
+
+#anne img {
+    border-radius: 80px;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#anne .who {
+    color: hsl(300, 24%, 96%);
+    font-weight: 600;
+    justify-self: center;
+    float: right;
+    margin-right: 7.6em;
+    margin-top: 2.3em;
+}
+
+#anne span {
+    color: hsl(303, 10%, 53%);
+    font-weight: 200;
+}
+
+#anne .comment {
+    padding: 15px;
+}
+
+/*MOBILE VERSION*/
