@@ -1,201 +1,160 @@
-* {
+*{
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;500;600&display=swap');
-
-body {
-
-    display: flex;
+body{
     font-family: 'Spartan', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    max-width: 1440px;
-    margin: 0 auto;
+    font-size:15px;
 }
 
-/*GRID*/
-.container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas:
-        "pro stars stars"
-        "colton irene anne";
-    max-width: 1200px;
-    max-height: 100vh;
-    margin: 0 auto;
-    margin-top: 7%;
-    word-spacing: 0.1em;
-    letter-spacing: 0.12em;
-    column-gap: 2em;
-    row-gap: 1.2em;
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/bg-pattern-top-desktop.svg"),url("images/bg-pattern-bottom-desktop.svg");
+    background-position: top left,bottom right;
+    background-size: 35%,70%;
+    background-repeat: no-repeat, no-repeat;
 }
-/*PRO*/
-#pro {
-    grid-area: pro;
+.main-content{
+    padding: 2em 2em;
+    max-width:1050px;
 }
-
-#pro h1 {
-    color: hsl(300, 43%, 22%);
-    font-size: 3rem;
+/* Top Section Styles */
+.top{
+    display: flex;
+    gap:40px;
+    margin-bottom: 4em;
+    justify-content: space-between;
 }
-
-#pro p {
-    color: hsl(300, 13%, 48%);
-    margin-top: 20px;
+.left{
+    width:40%;
 }
-
-/*STARS*/
-#stars {
-    grid-area: stars;
-    color: hsl(300, 43%, 22%);
-    line-height: 2.5em;
-    margin-left: 6em;
+.main-text{
+    color: #502050;
+    font-size:38px;
     font-weight: 600;
+    margin-bottom:14px;
+}
+.main-para{
+    line-height: 1.7;
+    /* font-size:12px; */
+    opacity:0.6;
+    font-weight: 500;
 }
 
-
-#stars #first {
-    padding-bottom: 28px;
-    max-width: 375px;
-    text-align: center;
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-
-#stars #second {
-    padding-bottom: 28px;
-    max-width: 375px;
-    text-align: center;
-    margin-left: 4em;
-}
-
-#stars #third {
-    padding-bottom: 28px;
-    max-width: 375px;
-    text-align: center;
-    margin-left: 8em;
-}
-
-#stars p {
+.rating{
+    display: flex;
+    align-items: center;
+    gap:25px;
+    padding: 1em 4em 1em 2em;
+    border-radius: 10px;
     background-color: hsl(300, 24%, 96%);
 }
-
-#stars .review {
-    border-radius: 12px;
+.rating-text{
+    display: inline;
+    color: #502050;
 }
 
-#stars .report {
-    border-radius: 12px;
+.rate-2{
+    position: relative;
+    left: 2em;
+}
+.rate-3{
+    position: relative;
+    left: 4em;
 }
 
-#stars .best {
-    border-radius: 12px;
+
+
+/* Bottom Section Styles */
+.bottom{
+    display: flex;
+    gap: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 1.5em 2em;
+    background-color:#502050;
+    border-radius:10px;
+}
+.user-details img{
+    width:35px;
+    margin-right: 1em;
+    border-radius:100px;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+}
+.details h5{
+    color: white;
+}
+.details p{
+    margin-top: 3px;
+    font-size:12px;
+    color: #ee68a4;
+}
+blockquote{
+    line-height: 1.7;
+    font-size:12px;
+    color:hsl(300, 24%, 96%);
+    font-weight:400;
+}
+.item-2{
+    position: relative;
+    top: 20px;
+}
+.item-3{
+    position: relative;
+    top: 30px;
 }
 
-/*CUSTOMERS*/
 
-            /*COLTON*/
-#colton {
-    grid-area: colton;
-    background-color: hsl(300, 43%, 22%);
-    color: hsl(0, 0%, 100%);
-    border-radius: 12px;
-    height: 245px;
+@media (max-width:748px){
+    
+    .container{
+        background-image: url("images/bg-pattern-top-mobile.svg"),url("images/bg-pattern-bottom-mobile.svg");
+        background-position: top left,bottom right;
+        background-size: 100%,100%;
+        background-repeat: no-repeat, no-repeat;
+    }
+    .left,.top,.right,.bottom,.rating{
+        flex-direction: column;
+    }
+    .top{
+        margin-top: 4em;
+    }
+    .left{
+        width:100%;
+        text-align: center;
+    }
+    .rating{
+        gap:10px;
+    }
+    .rate-2,.rate-3{
+        position: relative;
+        left: 0px;
+    }
+    .item-2,.item-3{
+        top:0;
+    }
+    .main-text{
+
+    }
+    h5,.details p,blockquote{
+        font-size:14px;
+    }
+    
 }
-
-#colton img {
-    border-radius: 80px;
-    margin-top: 1em;
-    margin-left: 1em;
-}
-
-#colton .who {
-    color: hsl(300, 24%, 96%);
-    font-weight: 600;
-    justify-self: center;
-    float: right;
-    margin-right: 7.6em;
-    margin-top: 2.3em;
-}
-
-#colton span {
-    color: hsl(303, 10%, 53%);
-    font-weight: 200;
-}
-
-#colton .comment {
-    padding: 15px;
-}
-
-/*IRENE*/
-#irene {
-    grid-area: irene;
-    background-color: hsl(300, 43%, 22%);
-    color: hsl(0, 0%, 100%);
-    border-radius: 12px;
-    height: 245px;
-    margin-top: 4em;
-}
-
-#irene img {
-    border-radius: 80px;
-    margin-top: 1em;
-    margin-left: 1em;
-}
-
-#irene .who {
-    color: hsl(300, 24%, 96%);
-    font-weight: 600;
-    justify-self: center;
-    float: right;
-    margin-right: 7.6em;
-    margin-top: 2.3em;
-}
-
-#irene span {
-    color: hsl(303, 10%, 53%);
-    font-weight: 200;
-}
-
-#irene .comment {
-    padding: 15px;
-}
-
-/*ANNE*/
-#anne {
-    grid-area: anne;
-    background-color: hsl(300, 43%, 22%);
-    color: hsl(0, 0%, 100%);
-    border-radius: 12px;
-    height: 245px;
-    margin-top: 8em;
-}
-
-#anne img {
-    border-radius: 80px;
-    margin-top: 1em;
-    margin-left: 1em;
-}
-
-#anne .who {
-    color: hsl(300, 24%, 96%);
-    font-weight: 600;
-    justify-self: center;
-    float: right;
-    margin-right: 7.6em;
-    margin-top: 2.3em;
-}
-
-#anne span {
-    color: hsl(303, 10%, 53%);
-    font-weight: 200;
-}
-
-#anne .comment {
-    padding: 15px;
-}
-
-/*MOBILE VERSION*/
